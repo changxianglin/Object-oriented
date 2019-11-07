@@ -1,3 +1,19 @@
+// function Circle(radius) {
+//   this.radius = radius
+//   this.draw = function() {
+//     console.log('draw')
+//   }
+// }
+
+// const circle = new Circle(10)
+
+// circle.location = { x: 1}
+
+// const propertyName = 'center location'
+// circle[propertyName] = { x: 1}
+
+// delete circle.location
+
 function Circle(radius) {
   this.radius = radius
   this.draw = function() {
@@ -7,9 +23,14 @@ function Circle(radius) {
 
 const circle = new Circle(10)
 
-circle.location = { x: 1}
+for (let key in circle) {
+  if(typeof circle[key] !== 'function') {
+    console.log(key, circle[key])
+  }
+}
 
-const propertyName = 'center location'
-circle[propertyName] = { x: 1}
+const keys = Object.keys(circle)
+console.log(keys)
 
-delete circle.location
+if('radius' in circle) 
+  console.log('Circle has a radius')
