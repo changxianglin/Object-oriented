@@ -15,4 +15,4 @@ function Book(title, author, year) {
 const book3 = new Book('Book One', 'Jone Doe', '2018')
 const book4 = new Book('Book Two', 'Jane Doe', '2019')
 
-console.log(book3.getSummary())
+// console.log(book3.getSummary())
