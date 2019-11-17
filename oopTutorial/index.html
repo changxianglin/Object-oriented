@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*
+    let Book = new Object() 
+    
+    // properties
+    Book.title = 'The hedling power of Breath'
+    Book.price = 70.00
+    Book.author = 'yezhi'
+
+    // method
+    Book.getInfo = function() {
+      return this.title + ' - ' + '￥' + this.price + ' RMB by ' + this.author
+    }
+    */
+
+    /*
+    let Book = {
+      title: 'The hedling power of Breath',
+      author: ['yezhi', 'moyan', 'wangxiaobo'],
+      price: 120.00,
+      description: 'Bearch teachniques to improve head well-being.',
+      // multi word property names
+      'publication date': 'Auguesst 15 2019',
+
+      getInfo: function() {
+        return this.title + ' - ' + '￥' + this.price + ' RMB by ' + this.author
+      }
+    }
+    */
+
+    // Using a Function
+    /*
+    function Book(title, ) {
+      this.title = title
+      this.author = ['yezhi', 'moyan', 'haizi']
+      this.description =  'Rediscover the lost ancient my teachings of the comsim Womb'
+      this.price = 32.80
+
+      // this.getInfo = getBookInfo
+    }
+    */
+    // using a function outside of the Book ojbect
+    /*
+    function getBookInfo() {
+      return this.title + ' - ' + '￥' + this.price + ' RMB by ' + this.author
+    }
+    */
+   /*
+   Book.prototype.getInfo = function() {
+      return this.title + ' - ' + '￥' + this.price + ' RMB by ' + this.author
+    }
+    */
+   let Book = new function() { // new instantlates the object
+     this.title = 'Wowmb Awaking'
+     this.price = 210.12
+     this.author = 'Azra Bertrand'
+     this.getInfo = function() {
+      return this.title + ' - ' + '￥' + this.price + ' RMB by ' + this.author
+    }
+   }
+  </script>
+</body>
+</html>
